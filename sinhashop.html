@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -794,4 +795,802 @@ document.addEventListener('keydown',e=>{
 });
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinha Shop — Premium Dairy & Sweets</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,700;0,800;1,700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --cream:#FDFAF5;
+  --brown:#2C1810;
+  --brown-mid:#5C3D2E;
+  --amber:#D4860A;
+  --amber-light:#F5C842;
+  --teal:#0A7B6C;
+  --teal-light:#E6F4F1;
+  --gray:#6B7280;
+  --gray-light:#F3F4F6;
+  --white:#FFFFFF;
+  --border:#E5E0D8;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--brown);}
+
+/* ── NAVBAR ── */
+nav{
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  padding:0 48px;
+  height:68px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:200;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:10px;
+  font-family:'Fraunces',serif;font-size:22px;font-weight:800;
+  color:var(--brown);letter-spacing:-0.5px;
+}
+.logo-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--amber);display:inline-block;margin-bottom:2px;
+}
+.nav-center{display:flex;gap:32px;}
+.nav-center a{
+  font-size:14px;font-weight:500;color:var(--gray);
+  text-decoration:none;transition:color .2s;
+}
+.nav-center a:hover{color:var(--brown);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+
+.btn-login{
+  border:1.5px solid var(--border);background:var(--white);
+  color:var(--brown);padding:8px 20px;border-radius:8px;
+  font-size:13px;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:all .2s;
+}
+.btn-login:hover{border-color:var(--brown);background:var(--gray-light);}
+
+.user-badge{
+  display:none;align-items:center;gap:8px;
+  background:var(--gray-light);padding:6px 14px 6px 8px;
+  border-radius:8px;border:1px solid var(--border);
+}
+.user-avatar{
+  width:28px;height:28px;border-radius:6px;
+  background:var(--brown);color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;
+}
+.user-name{font-size:13px;font-weight:600;color:var(--brown);}
+.btn-logout{
+  font-size:12px;color:var(--gray);cursor:pointer;
+  background:none;border:none;font-family:'Inter',sans-serif;
+  font-weight:500;
+}
+.btn-logout:hover{color:#dc2626;}
+
+.btn-cart{
+  background:var(--brown);color:var(--white);
+  border:none;padding:9px 20px;border-radius:8px;
+  font-size:13px;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:all .2s;
+  display:flex;align-items:center;gap:8px;
+}
+.btn-cart:hover{background:var(--brown-mid);}
+.cart-count{
+  background:var(--amber);color:var(--white);
+  font-size:11px;font-weight:700;
+  width:18px;height:18px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ── HERO ── */
+.hero{
+  background:var(--brown);
+  padding:80px 48px;
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  align-items:center;min-height:460px;
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;right:0;top:0;bottom:0;width:48%;
+  background:url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=85') center/cover no-repeat;
+  opacity:0.25;
+}
+.hero-content{position:relative;z-index:1;}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(212,134,10,0.15);border:1px solid rgba(212,134,10,0.3);
+  color:var(--amber-light);
+  font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  padding:6px 14px;border-radius:4px;margin-bottom:24px;
+}
+.hero h1{
+  font-family:'Fraunces',serif;
+  font-size:56px;font-weight:800;line-height:1.05;
+  color:var(--white);margin-bottom:20px;letter-spacing:-1.5px;
+}
+.hero h1 em{color:var(--amber-light);font-style:italic;}
+.hero p{
+  font-size:16px;color:rgba(255,255,255,0.65);
+  line-height:1.7;max-width:420px;margin-bottom:36px;
+}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary{
+  background:var(--amber);color:var(--white);
+  border:none;padding:14px 32px;border-radius:8px;
+  font-size:15px;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:all .25s;
+}
+.btn-primary:hover{background:var(--amber-light);color:var(--brown);}
+.btn-outline{
+  background:transparent;color:var(--white);
+  border:1.5px solid rgba(255,255,255,0.3);
+  padding:14px 28px;border-radius:8px;
+  font-size:15px;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:all .25s;
+}
+.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+
+.hero-stats{
+  display:flex;gap:32px;margin-top:40px;padding-top:32px;
+  border-top:1px solid rgba(255,255,255,0.12);
+}
+.stat-num{font-family:'Fraunces',serif;font-size:28px;font-weight:800;color:var(--white);}
+.stat-label{font-size:12px;color:rgba(255,255,255,0.5);font-weight:500;margin-top:2px;}
+
+/* ── CATEGORY STRIP ── */
+.cat-strip{
+  background:var(--white);border-bottom:1px solid var(--border);
+  padding:0 48px;display:flex;align-items:center;gap:4px;
+  overflow-x:auto;
+}
+.cat-btn{
+  padding:16px 22px;font-size:13px;font-weight:600;
+  border:none;background:transparent;cursor:pointer;
+  font-family:'Inter',sans-serif;color:var(--gray);
+  border-bottom:2px solid transparent;
+  white-space:nowrap;transition:all .2s;
+}
+.cat-btn:hover{color:var(--brown);}
+.cat-btn.active{color:var(--amber);border-bottom-color:var(--amber);}
+
+/* ── PRODUCTS ── */
+.products-wrap{max-width:1280px;margin:0 auto;padding:48px 48px 80px;}
+.section-header{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:32px;
+}
+.section-header h2{
+  font-family:'Fraunces',serif;font-size:32px;font-weight:800;
+  color:var(--brown);letter-spacing:-0.5px;
+}
+.section-header span{font-size:13px;color:var(--gray);font-weight:500;}
+
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:24px;
+}
+
+.product-card{
+  background:var(--white);border-radius:12px;
+  border:1px solid var(--border);overflow:hidden;
+  transition:transform .3s ease,box-shadow .3s ease;
+  cursor:pointer;
+}
+.product-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 40px rgba(44,24,16,0.12);
+}
+.product-img-wrap{
+  height:200px;overflow:hidden;position:relative;
+  background:var(--gray-light);
+}
+.product-img-wrap img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s ease;
+}
+.product-card:hover .product-img-wrap img{transform:scale(1.06);}
+
+.product-tag{
+  position:absolute;top:12px;left:12px;
+  background:var(--white);color:var(--brown);
+  font-size:11px;font-weight:700;letter-spacing:0.5px;
+  padding:4px 10px;border-radius:4px;
+  border:1px solid var(--border);text-transform:uppercase;
+}
+.product-tag.green{background:var(--teal);color:var(--white);border-color:var(--teal);}
+.product-tag.amber{background:var(--amber);color:var(--white);border-color:var(--amber);}
+
+.product-body{padding:18px 18px 20px;}
+.product-category{
+  font-size:11px;font-weight:600;color:var(--teal);
+  text-transform:uppercase;letter-spacing:0.8px;margin-bottom:6px;
+}
+.product-name{
+  font-size:16px;font-weight:700;color:var(--brown);
+  margin-bottom:6px;line-height:1.3;
+}
+.product-desc{font-size:13px;color:var(--gray);line-height:1.5;margin-bottom:16px;}
+.product-footer{display:flex;align-items:center;justify-content:space-between;}
+.product-price{
+  font-family:'Fraunces',serif;
+  font-size:22px;font-weight:700;color:var(--brown);
+}
+.product-price sup{font-size:13px;font-weight:600;font-family:'Inter',sans-serif;}
+
+.btn-add{
+  background:var(--brown);color:var(--white);
+  border:none;padding:9px 16px;border-radius:7px;
+  font-size:13px;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:all .2s;
+}
+.btn-add:hover{background:var(--brown-mid);}
+.btn-add.added{background:var(--teal);}
+
+/* ── LOGIN MODAL ── */
+.overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(44,24,16,0.5);backdrop-filter:blur(4px);
+  z-index:400;align-items:center;justify-content:center;
+}
+.overlay.show{display:flex;}
+.modal{
+  background:var(--white);border-radius:16px;
+  width:100%;max-width:420px;padding:40px;
+  position:relative;animation:slideUp .3s ease;
+  box-shadow:0 32px 80px rgba(44,24,16,0.25);
+}
+@keyframes slideUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.modal-x{
+  position:absolute;top:16px;right:16px;
+  width:32px;height:32px;border-radius:6px;
+  background:var(--gray-light);border:none;
+  cursor:pointer;font-size:16px;color:var(--gray);
+  display:flex;align-items:center;justify-content:center;
+}
+.modal-x:hover{background:var(--border);color:var(--brown);}
+.modal-logo{
+  font-family:'Fraunces',serif;font-size:26px;font-weight:800;
+  color:var(--brown);margin-bottom:4px;
+}
+.modal-sub{font-size:14px;color:var(--gray);margin-bottom:28px;}
+
+.tabs{
+  display:flex;background:var(--gray-light);
+  border-radius:8px;padding:3px;margin-bottom:24px;
+}
+.tab{
+  flex:1;padding:9px;font-size:13px;font-weight:600;
+  border:none;background:transparent;cursor:pointer;
+  font-family:'Inter',sans-serif;color:var(--gray);
+  border-radius:6px;transition:all .2s;
+}
+.tab.active{background:var(--white);color:var(--brown);box-shadow:0 1px 4px rgba(0,0,0,0.1);}
+
+.field{margin-bottom:14px;}
+.field label{
+  display:block;font-size:12px;font-weight:600;
+  color:var(--brown);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px;
+}
+.field input{
+  width:100%;padding:11px 14px;
+  border:1.5px solid var(--border);border-radius:8px;
+  font-size:14px;font-family:'Inter',sans-serif;
+  outline:none;transition:border .2s;color:var(--brown);
+  background:var(--cream);
+}
+.field input:focus{border-color:var(--amber);background:var(--white);}
+
+.btn-submit{
+  width:100%;padding:13px;margin-top:6px;
+  background:var(--brown);color:var(--white);
+  border:none;border-radius:8px;
+  font-size:15px;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:all .2s;
+}
+.btn-submit:hover{background:var(--brown-mid);}
+.msg-err{font-size:13px;color:#dc2626;margin-top:8px;display:none;font-weight:500;}
+.msg-ok{font-size:13px;color:var(--teal);margin-top:8px;display:none;font-weight:500;}
+.demo-box{
+  margin-top:16px;padding:12px;background:var(--gray-light);
+  border-radius:8px;font-size:12px;color:var(--gray);
+  border:1px dashed var(--border);
+}
+
+/* ── CART DRAWER ── */
+.cart-mask{display:none;position:fixed;inset:0;background:rgba(44,24,16,0.4);z-index:300;}
+.cart-mask.open{display:block;}
+.cart-drawer{
+  position:fixed;right:0;top:0;bottom:0;width:420px;max-width:96vw;
+  background:var(--white);z-index:301;
+  transform:translateX(100%);transition:transform .35s cubic-bezier(.77,0,.18,1);
+  display:flex;flex-direction:column;
+  border-left:1px solid var(--border);
+}
+.cart-drawer.open{transform:translateX(0);}
+.cart-head{
+  padding:22px 24px;border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.cart-head h2{font-size:18px;font-weight:700;color:var(--brown);}
+.cart-x{
+  width:32px;height:32px;border-radius:6px;
+  background:var(--gray-light);border:none;cursor:pointer;
+  font-size:16px;color:var(--gray);
+  display:flex;align-items:center;justify-content:center;
+}
+.cart-x:hover{background:var(--border);}
+.cart-body{flex:1;overflow-y:auto;padding:16px;}
+.cart-empty-state{
+  text-align:center;padding:64px 20px;color:var(--gray);
+}
+.cart-empty-state div{font-size:48px;margin-bottom:12px;opacity:0.4;}
+.cart-empty-state p{font-size:14px;font-weight:500;}
+
+.cart-item{
+  display:flex;gap:14px;align-items:center;
+  padding:14px;border-radius:10px;
+  border:1px solid var(--border);margin-bottom:10px;
+  transition:background .2s;
+}
+.cart-item:hover{background:var(--cream);}
+.cart-item img{width:56px;height:56px;border-radius:8px;object-fit:cover;}
+.ci-info{flex:1;}
+.ci-name{font-size:14px;font-weight:600;color:var(--brown);margin-bottom:2px;}
+.ci-price{font-size:13px;color:var(--gray);font-weight:500;}
+.qty-wrap{display:flex;align-items:center;gap:8px;}
+.qty-btn{
+  width:28px;height:28px;border-radius:6px;border:1px solid var(--border);
+  background:var(--white);color:var(--brown);
+  font-size:15px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .15s;
+}
+.qty-btn:hover{background:var(--gray-light);}
+.qty-n{font-size:14px;font-weight:700;min-width:20px;text-align:center;color:var(--brown);}
+.ci-del{background:none;border:none;color:#dc2626;font-size:16px;cursor:pointer;padding:4px;}
+
+.cart-foot{
+  padding:20px 24px;border-top:1px solid var(--border);background:var(--cream);
+}
+.cart-total-row{
+  display:flex;justify-content:space-between;
+  font-size:18px;font-weight:700;color:var(--brown);margin-bottom:16px;
+}
+.btn-pay{
+  width:100%;padding:15px;
+  background:var(--amber);color:var(--white);
+  border:none;border-radius:8px;
+  font-size:15px;font-weight:700;cursor:pointer;
+  font-family:'Inter',sans-serif;transition:all .2s;
+}
+.btn-pay:hover{background:var(--amber-light);color:var(--brown);}
+
+/* ── SUCCESS ── */
+.success-wrap{
+  display:none;position:fixed;inset:0;
+  background:rgba(44,24,16,0.55);z-index:500;
+  align-items:center;justify-content:center;
+}
+.success-wrap.show{display:flex;}
+.success-card{
+  background:var(--white);border-radius:16px;
+  padding:52px 44px;text-align:center;
+  max-width:400px;width:90%;
+  animation:slideUp .4s ease;
+  box-shadow:0 32px 80px rgba(44,24,16,0.25);
+}
+.success-icon{font-size:56px;margin-bottom:20px;}
+.success-card h2{
+  font-family:'Fraunces',serif;font-size:28px;
+  color:var(--brown);margin-bottom:8px;
+}
+.success-card p{font-size:15px;color:var(--gray);line-height:1.6;margin-bottom:28px;}
+.btn-ok{
+  background:var(--brown);color:var(--white);
+  border:none;padding:13px 48px;border-radius:8px;
+  font-size:15px;font-weight:600;cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+
+/* ── TRUST STRIP ── */
+.trust-strip{
+  background:var(--teal-light);border-top:1px solid #C3E0DA;border-bottom:1px solid #C3E0DA;
+  padding:24px 48px;
+  display:flex;gap:48px;justify-content:center;flex-wrap:wrap;
+}
+.trust-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:14px;font-weight:600;color:var(--teal);
+}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--brown);color:rgba(255,255,255,0.5);
+  padding:32px 48px;font-size:13px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+footer .footer-logo{
+  font-family:'Fraunces',serif;font-size:18px;
+  color:var(--white);font-weight:800;
+}
+footer a{color:rgba(255,255,255,0.4);text-decoration:none;margin-left:20px;}
+footer a:hover{color:var(--amber-light);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  nav{padding:0 16px;}
+  .nav-center{display:none;}
+  .hero{grid-template-columns:1fr;padding:52px 20px 40px;}
+  .hero h1{font-size:36px;}
+  .hero::after{display:none;}
+  .cat-strip{padding:0 16px;}
+  .products-wrap{padding:32px 16px 60px;}
+  .trust-strip{padding:20px 16px;gap:20px;}
+  footer{padding:24px 16px;flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <span class="logo-dot"></span> Sinha Shop
+  </div>
+  <div class="nav-center">
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-login" id="navLoginBtn" onclick="openModal()">Sign In</button>
+    <div class="user-badge" id="userBadge">
+      <div class="user-avatar" id="userAvatar">U</div>
+      <span class="user-name" id="userNameTxt">User</span>
+      <button class="btn-logout" onclick="doLogout()">Sign out</button>
+    </div>
+    <button class="btn-cart" onclick="openCart()">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">⭐ Est. 2010 · Trusted by 10,000+ Families</div>
+    <h1>Premium Dairy &amp; <em>Sweet</em> Delights</h1>
+    <p>Fresh ice cream, pure milk, crispy biscuits, and rich chocolates — delivered straight from our store to your doorstep.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="document.querySelector('.products-wrap').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+      <button class="btn-outline">Our Story</button>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">10K+</div><div class="stat-label">Happy Customers</div></div>
+      <div><div class="stat-num">50+</div><div class="stat-label">Fresh Products</div></div>
+      <div><div class="stat-num">14yr</div><div class="stat-label">Trusted Since</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item">✅ 100% Fresh & Pure</div>
+  <div class="trust-item">🚚 Fast Home Delivery</div>
+  <div class="trust-item">💳 Secure Payment</div>
+  <div class="trust-item">🔄 Easy Returns</div>
+</div>
+
+<!-- CATEGORY FILTER -->
+<div class="cat-strip">
+  <button class="cat-btn active" onclick="filterCat('all',this)">All Products</button>
+  <button class="cat-btn" onclick="filterCat('icecream',this)">Ice Cream</button>
+  <button class="cat-btn" onclick="filterCat('milk',this)">Fresh Milk</button>
+  <button class="cat-btn" onclick="filterCat('biscuit',this)">Biscuits</button>
+  <button class="cat-btn" onclick="filterCat('chocolate',this)">Chocolates</button>
+</div>
+
+<!-- PRODUCTS -->
+<div class="products-wrap">
+  <div class="section-header">
+    <h2>Our Products</h2>
+    <span id="productCount">12 items</span>
+  </div>
+  <div class="products-grid" id="grid"></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Sinha Shop</div>
+  <div>© 2024 Sinha Shop. All rights reserved.</div>
+  <div>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="overlay" id="loginOverlay">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal()">✕</button>
+    <div class="modal-logo">Sinha Shop</div>
+    <div class="modal-sub">Sign in to your account or create a new one</div>
+    <div class="tabs">
+      <button class="tab active" id="tabA" onclick="switchTab('login')">Sign In</button>
+      <button class="tab" id="tabB" onclick="switchTab('signup')">Create Account</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="fLogin">
+      <div class="field"><label>Email Address</label><input type="email" id="lEmail" placeholder="you@email.com"/></div>
+      <div class="field">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <label style="margin-bottom:0">Password</label>
+          <button onclick="switchTab('forgot')" style="font-size:12px;color:var(--amber);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:600;">Forgot Password?</button>
+        </div>
+        <input type="password" id="lPass" placeholder="Enter password"/>
+      </div>
+      <div class="msg-err" id="lErr">Incorrect email or password. Please try again.</div>
+      <button class="btn-submit" onclick="doLogin()">Sign In</button>
+      <div class="demo-box"><strong>Demo account:</strong> user@sinha.com &nbsp;/&nbsp; sinha123</div>
+    </div>
+
+    <!-- SIGNUP -->
+    <div id="fSignup" style="display:none">
+      <div class="field"><label>Full Name</label><input type="text" id="sName" placeholder="Your full name"/></div>
+      <div class="field"><label>Email Address</label><input type="email" id="sEmail" placeholder="you@email.com"/></div>
+      <div class="field"><label>Password</label><input type="password" id="sPass" placeholder="Create a password"/></div>
+      <div class="msg-err" id="sErr">Please fill in all fields.</div>
+      <div class="msg-ok" id="sOk">✓ Account created! You can now sign in.</div>
+      <button class="btn-submit" onclick="doSignup()">Create Account</button>
+    </div>
+
+    <!-- FORGOT PASSWORD -->
+    <div id="fForgot" style="display:none">
+      <div style="text-align:center;margin-bottom:20px;">
+        <div style="font-size:40px;margin-bottom:10px;">🔑</div>
+        <div style="font-size:15px;font-weight:600;color:var(--brown);margin-bottom:6px;">Reset Your Password</div>
+        <div style="font-size:13px;color:var(--gray);line-height:1.5;">Enter your registered email address.<br>We will reset your password.</div>
+      </div>
+      <div class="field"><label>Registered Email</label><input type="email" id="fEmail" placeholder="you@email.com"/></div>
+      <div class="msg-err" id="fErr">No account found with this email.</div>
+      <div class="msg-ok" id="fOk"></div>
+      <button class="btn-submit" onclick="doForgot()">Reset Password</button>
+      <div style="text-align:center;margin-top:16px;">
+        <button onclick="switchTab('login')" style="font-size:13px;color:var(--gray);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:600;">← Back to Sign In</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="cart-mask" id="cartMask" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h2>Your Cart</h2>
+    <button class="cart-x" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-foot">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span>₹<span id="cartTotal">0</span></span>
+    </div>
+    <button class="btn-pay" onclick="doCheckout()">Proceed to Payment →</button>
+  </div>
+</div>
+
+<!-- SUCCESS -->
+<div class="success-wrap" id="successWrap">
+  <div class="success-card">
+    <div class="success-icon">✅</div>
+    <h2>Order Confirmed!</h2>
+    <p>Your order has been placed successfully.<br>Sinha Shop has been notified and will process it shortly.</p>
+    <button class="btn-ok" onclick="closeSuccess()">Continue Shopping</button>
+  </div>
+</div>
+
+<script>
+const PRODUCTS = [
+  {id:1, name:"Classic Vanilla",      cat:"icecream",  tag:"Bestseller", tagClass:"amber", price:40,  desc:"Smooth & creamy pure vanilla ice cream",        img:"https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=500&q=80"},
+  {id:2, name:"Dark Chocolate Scoop", cat:"icecream",  tag:"Popular",    tagClass:"",      price:50,  desc:"Rich Belgian chocolate, deeply satisfying",       img:"https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&q=80"},
+  {id:3, name:"Strawberry Swirl",     cat:"icecream",  tag:"Fresh",      tagClass:"green", price:45,  desc:"Bursting with real strawberry pieces",            img:"https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=500&q=80"},
+  {id:4, name:"Mango Sorbet",         cat:"icecream",  tag:"Seasonal",   tagClass:"amber", price:55,  desc:"Tropical Alphonso mango, zero cream",             img:"https://images.unsplash.com/photo-1588001400947-6385aef4ab0e?w=500&q=80"},
+  {id:5, name:"Full Cream Milk 500ml",cat:"milk",      tag:"Daily",      tagClass:"green", price:30,  desc:"Farm-fresh, pasteurised, delivered daily",        img:"https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500&q=80"},
+  {id:6, name:"Toned Milk 1 Litre",   cat:"milk",      tag:"Value",      tagClass:"",      price:52,  desc:"Low-fat, high-protein, great for daily use",      img:"https://images.unsplash.com/photo-1612544448445-b8232cff3b6c?w=500&q=80"},
+  {id:7, name:"Butter Cookies",       cat:"biscuit",   tag:"Crunchy",    tagClass:"",      price:35,  desc:"Golden baked, real butter, melt-in-mouth",        img:"https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&q=80"},
+  {id:8, name:"Choco Cream Biscuit",  cat:"biscuit",   tag:"Kids Pick",  tagClass:"amber", price:25,  desc:"Double chocolate layers, kids absolutely love it",img:"https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&q=80"},
+  {id:9, name:"Oat & Honey Biscuit",  cat:"biscuit",   tag:"Healthy",    tagClass:"green", price:40,  desc:"Wholesome oats, natural honey, no maida",         img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80"},
+  {id:10,name:"72% Dark Chocolate",   cat:"chocolate", tag:"Premium",    tagClass:"amber", price:120, desc:"Single-origin cacao, intense and complex",         img:"https://images.unsplash.com/photo-1511381939415-e44976f15d79?w=500&q=80"},
+  {id:11,name:"Milk Chocolate Slab",  cat:"chocolate", tag:"Classic",    tagClass:"",      price:60,  desc:"Smooth creamy milk chocolate, the original",      img:"https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=500&q=80"},
+  {id:12,name:"Assorted Gift Box",    cat:"chocolate", tag:"Gift",       tagClass:"green", price:220, desc:"12 chocolates, beautifully boxed for gifting",    img:"https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=500&q=80"},
+];
+
+const CAT_LABEL = {icecream:"Ice Cream", milk:"Fresh Milk", biscuit:"Biscuits", chocolate:"Chocolates"};
+let cart=[], currentUser=null;
+let users=[{name:"Sinha User",email:"user@sinha.com",password:"sinha123"}];
+
+function renderProducts(list){
+  const g=document.getElementById('grid');
+  g.innerHTML='';
+  document.getElementById('productCount').textContent=list.length+' items';
+  list.forEach(p=>{
+    const d=document.createElement('div');
+    d.className='product-card';
+    d.innerHTML=`
+      <div class="product-img-wrap">
+        <img src="${p.img}" alt="${p.name}" loading="lazy"/>
+        <div class="product-tag ${p.tagClass}">${p.tag}</div>
+      </div>
+      <div class="product-body">
+        <div class="product-category">${CAT_LABEL[p.cat]}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc}</div>
+        <div class="product-footer">
+          <div class="product-price"><sup>₹</sup>${p.price}</div>
+          <button class="btn-add" id="btn-${p.id}" onclick="addToCart(${p.id})">Add to Cart</button>
+        </div>
+      </div>`;
+    g.appendChild(d);
+  });
+}
+renderProducts(PRODUCTS);
+
+function filterCat(cat,btn){
+  document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProducts(cat==='all'?PRODUCTS:PRODUCTS.filter(p=>p.cat===cat));
+}
+
+/* LOGIN */
+function openModal(){document.getElementById('loginOverlay').classList.add('show');switchTab('login');}
+function closeModal(){document.getElementById('loginOverlay').classList.remove('show');clearMsgs();}
+function switchTab(t){
+  document.getElementById('fLogin').style.display=t==='login'?'block':'none';
+  document.getElementById('fSignup').style.display=t==='signup'?'block':'none';
+  document.getElementById('fForgot').style.display=t==='forgot'?'block':'none';
+  document.getElementById('tabA').classList.toggle('active',t==='login');
+  document.getElementById('tabB').classList.toggle('active',t==='signup');
+  clearMsgs();
+}
+function doForgot(){
+  const email=document.getElementById('fEmail').value.trim();
+  const found=users.find(u=>u.email===email);
+  if(!found){document.getElementById('fErr').style.display='block';document.getElementById('fOk').style.display='none';return;}
+  document.getElementById('fErr').style.display='none';
+  // Show new password field
+  const okEl=document.getElementById('fOk');
+  okEl.style.display='block';
+  okEl.innerHTML='✓ Account found! Set your new password below.';
+  // Dynamically add new password input if not already added
+  if(!document.getElementById('newPassField')){
+    const wrap=document.getElementById('fForgot');
+    const field=document.createElement('div');
+    field.className='field';field.id='newPassField';
+    field.innerHTML='<label>New Password</label><input type="password" id="newPass" placeholder="Enter new password"/>';
+    const btn=wrap.querySelector('.btn-submit');
+    wrap.insertBefore(field,btn);
+    btn.textContent='Update Password';
+    btn.setAttribute('onclick','doUpdatePass()');
+  }
+}
+function doUpdatePass(){
+  const email=document.getElementById('fEmail').value.trim();
+  const newPass=document.getElementById('newPass').value.trim();
+  if(!newPass){alert('Please enter a new password.');return;}
+  const user=users.find(u=>u.email===email);
+  if(user){
+    user.password=newPass;
+    const okEl=document.getElementById('fOk');
+    okEl.innerHTML='✅ Password updated successfully! You can now sign in.';
+    // Remove new pass field
+    const f=document.getElementById('newPassField');
+    if(f)f.remove();
+    setTimeout(()=>switchTab('login'),2000);
+  }
+}
+function clearMsgs(){['lErr','sErr','sOk'].forEach(id=>document.getElementById(id).style.display='none');}
+function doLogin(){
+  const e=document.getElementById('lEmail').value.trim();
+  const p=document.getElementById('lPass').value.trim();
+  const u=users.find(x=>x.email===e&&x.password===p);
+  if(u){currentUser=u;closeModal();updateNav();}
+  else document.getElementById('lErr').style.display='block';
+}
+function doSignup(){
+  const n=document.getElementById('sName').value.trim();
+  const e=document.getElementById('sEmail').value.trim();
+  const p=document.getElementById('sPass').value.trim();
+  if(!n||!e||!p){document.getElementById('sErr').style.display='block';return;}
+  users.push({name:n,email:e,password:p});
+  document.getElementById('sOk').style.display='block';
+  document.getElementById('sErr').style.display='none';
+  setTimeout(()=>switchTab('login'),1600);
+}
+function doLogout(){currentUser=null;cart=[];updateNav();updateCount();}
+function updateNav(){
+  if(currentUser){
+    document.getElementById('navLoginBtn').style.display='none';
+    document.getElementById('userBadge').style.display='flex';
+    document.getElementById('userAvatar').textContent=currentUser.name[0].toUpperCase();
+    document.getElementById('userNameTxt').textContent=currentUser.name.split(' ')[0];
+  }else{
+    document.getElementById('navLoginBtn').style.display='block';
+    document.getElementById('userBadge').style.display='none';
+  }
+}
+
+/* CART */
+function addToCart(id){
+  if(!currentUser){openModal();return;}
+  const p=PRODUCTS.find(x=>x.id===id);
+  const ex=cart.find(x=>x.id===id);
+  if(ex)ex.qty++;else cart.push({...p,qty:1});
+  const b=document.getElementById('btn-'+id);
+  if(b){b.textContent='Added ✓';b.classList.add('added');setTimeout(()=>{b.textContent='Add to Cart';b.classList.remove('added');},1200);}
+  updateCount();
+}
+function updateCount(){document.getElementById('cartCount').textContent=cart.reduce((s,c)=>s+c.qty,0);}
+function openCart(){document.getElementById('cartMask').classList.add('open');document.getElementById('cartDrawer').classList.add('open');renderCart();}
+function closeCart(){document.getElementById('cartMask').classList.remove('open');document.getElementById('cartDrawer').classList.remove('open');}
+function renderCart(){
+  const b=document.getElementById('cartBody');
+  if(!cart.length){
+    b.innerHTML='<div class="cart-empty-state"><div>🛍</div><p>Your cart is empty.<br>Start adding products!</p></div>';
+    document.getElementById('cartTotal').textContent='0';return;
+  }
+  let html='',total=0;
+  cart.forEach(i=>{
+    total+=i.price*i.qty;
+    html+=`<div class="cart-item">
+      <img src="${i.img}" alt="${i.name}"/>
+      <div class="ci-info">
+        <div class="ci-name">${i.name}</div>
+        <div class="ci-price">₹${i.price} × ${i.qty} = ₹${i.price*i.qty}</div>
+      </div>
+      <div class="qty-wrap">
+        <button class="qty-btn" onclick="chQty(${i.id},-1)">−</button>
+        <span class="qty-n">${i.qty}</span>
+        <button class="qty-btn" onclick="chQty(${i.id},1)">+</button>
+      </div>
+      <button class="ci-del" onclick="delItem(${i.id})">✕</button>
+    </div>`;
+  });
+  b.innerHTML=html;
+  document.getElementById('cartTotal').textContent=total;
+}
+function chQty(id,d){const i=cart.find(x=>x.id===id);if(!i)return;i.qty+=d;if(i.qty<=0)cart=cart.filter(x=>x.id!==id);updateCount();renderCart();}
+function delItem(id){cart=cart.filter(x=>x.id!==id);updateCount();renderCart();}
+function doCheckout(){
+  if(!currentUser){closeCart();openModal();return;}
+  if(!cart.length){alert('Add items to your cart first.');return;}
+  closeCart();document.getElementById('successWrap').classList.add('show');
+  cart=[];updateCount();
+}
+function closeSuccess(){document.getElementById('successWrap').classList.remove('show');}
+
+/* CLOSE MODAL ON OUTSIDE CLICK */
+document.getElementById('loginOverlay').addEventListener('click',function(e){if(e.target===this)closeModal();});
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Enter')return;
+  const ov=document.getElementById('loginOverlay');
+  if(!ov.classList.contains('show'))return;
+  document.getElementById('fLogin').style.display!=='none'?doLogin():doSignup();
+});
+</script>
+</body>
+>>>>>>> 386dba890d87051e2b1092d7a1114fef207495bf
 </html>
