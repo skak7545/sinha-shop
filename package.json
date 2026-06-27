@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "description": "Sinha Shop - Premium Dairy & Sweets",
   "dependencies": {
-    "razorpay": "^2.9.2"
+    "razorpay": "^2.9.6"
   }
 }
